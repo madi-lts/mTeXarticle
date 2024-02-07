@@ -1,0 +1,272 @@
+\RequirePackage{silence}
+\RequirePackage{xspace}
+
+%% Functions
+\AtBeginDocument{
+    \DeclareMathOperator{\sech}{sech}
+    \DeclareMathOperator{\csch}{csch}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\sgn}{sgn}
+    \DeclareMathOperator{\erf}{erf}
+    \DeclareMathOperator{\re}{Re}
+    \DeclareMathOperator{\im}{Im}
+    \DeclareMathOperator{\var}{Var}
+    \DeclareMathOperator{\cov}{Cov}
+    \DeclareMathOperator{\ber}{ber}
+    \DeclareMathOperator{\bei}{bei}
+}
+
+%% Units
+    % Time
+    \newcommand{\s} {\ensuremath{\ \text{s}\xspace}}
+    \newcommand{\ms}{\ensuremath{\ \text{ns}\xspace}}
+    \newcommand{\us}{\ensuremath{\ \mu\text{s}}\xspace}
+    \newcommand{\ns}{\ensuremath{\ \text{\ns}\xspace}}
+    \newcommand{\ps}{\ensuremath{\ \text{ps}\xspace}}
+
+    % Frequency
+    \newcommand{\THz}{\text{THz}   \xspace}
+    \newcommand{\GHz}{\text{GHz}   \xspace}
+    \newcommand{\MHz}{\text{MHz}   \xspace}
+    \newcommand{\kHz}{\text{kHz}   \xspace}
+    \newcommand{\Hz} {\text{Hz}    \xspace}
+    \newcommand{\mHz}{\text{mHz}   \xspace}
+    \newcommand{\uHz}{\mu\text{Hz} \xspace}
+
+    % Length
+    \newcommand{\m}{\,\xspace\text{m}\xspace}
+    \newcommand{\cm}{\,\xspace\text{cm}\xspace}
+    \newcommand{\mm}{\,\xspace\text{mm}\xspace}
+    \newcommand{\um}{\,\xspace\ensuremath{\mu\text{m}}\xspace}
+    \newcommand{\nm}{\,\xspace\text{nm}\xspace}
+    \newcommand{\fm}{\,\xspace\text{fm}\xspace}
+
+    % Area
+
+    % Volume
+    \newcommand{\Liter}{\,\xspace\text{L}\xspace}
+    \newcommand{\mL}{\,\xspace\text{mL}\xspace}
+    \newcommand{\uL}{\,\xspace\mu\text{L}\xspace}
+
+    % Volume flow
+    \newcommand{\Lpm}{\,\xspace\tfrac{\text{L}}{\text{min}}\xspace}
+    \newcommand{\mLpm}{\,\xspace\tfrac{\text{mL}}{\text{min}}\xspace}
+
+
+    % Energy
+    \newcommand{\J}{\,\xspace\text{J}\xspace}
+    \newcommand{\mJ}{\,\xspace\text{mJ}\xspace}
+    \newcommand{\uJ}{\,\xspace\ensuremath{\mu\text{J}}\xspace}
+    \newcommand{\nJ}{\,\xspace\text{nJ}\xspace}
+
+    % Power
+    \newcommand{\TW}{\,\xspace\text{kW}\xspace}
+    \newcommand{\MW}{\,\xspace\text{kW}\xspace}
+    \newcommand{\kW}{\,\xspace\text{kW}\xspace}
+    \newcommand{\W}{\,\xspace\text{W}\xspace}
+    \newcommand{\mW}{\,\xspace\text{mW}\xspace}
+    \newcommand{\uW}{\,\xspace\ensuremath{\mu\text{W}}\xspace}
+    \newcommand{\nW}{\,\xspace\text{nW}\xspace}
+    \newcommand{\pW}{\,\xspace\text{pW}\xspace}
+
+    % Tempererature/entropy
+    \newcommand{\K}{\,\xspace\text{K}\xspace}
+    \newcommand{\uK}{\,\xspace\ensuremath{\mu\text{K}}\xspace}
+    \newcommand{\nK}{\,\xspace\text{nK}\xspace}
+    \newcommand{\pK}{\,\xspace\text{pK}\xspace}
+
+    % Current
+    \newcommand{\A}{\,\xspace\text{A}\xspace}
+    \newcommand{\mA}{\,\xspace\text{mA}\xspace}
+    \newcommand{\uA}{\,\xspace\ensuremath{\mu\text{A}}\xspace}
+    \newcommand{\nA}{\,\xspace\text{nA}\xspace}
+    \newcommand{\pA}{\,\xspace\text{pA}\xspace}
+
+    % Magnetic field
+    \newcommand{\G}{\,\xspace\text{G}\xspace}
+    \newcommand{\mG}{\,\xspace\text{mG}\xspace}
+    \newcommand{\uG}{\,\xspace\mu\text{G}\xspace}
+    \newcommand{\T}{\,\xspace\text{T}\xspace}
+
+
+
+    % Pressure
+    \newcommand{\Torr}{\,\xspace\text{Torr}\xspace}
+
+%% Quark abbreviations
+    \newcommand{\qqbar}{\ensuremath{q\bar{q}}\xspace}
+    \newcommand{\uubar}{\ensuremath{u\bar{u}}\xspace}
+    \newcommand{\ddbar}{\ensuremath{d\bar{d}}\xspace}
+    \newcommand{\ssbar}{\ensuremath{s\bar{s}}\xspace}
+    \newcommand{\ccbar}{\ensuremath{c\bar{c}}\xspace}
+    \newcommand{\ttbar}{\ensuremath{t\bar{t}}\xspace}
+    \newcommand{\bbbar}{\ensuremath{b\bar{b}}\xspace}
+
+%% Sets
+    \newcommand{\Hh}{\ensuremath{\mathbb{H}}\xspace}
+    \newcommand{\N}{\ensuremath{\mathbb{N}}\xspace}
+    \newcommand{\Aa}{\ensuremath{\mathbb{A}}\xspace}
+    \newcommand{\Z}{\ensuremath{\mathbb{Z}}\xspace}
+    \newcommand{\C}{\ensuremath{\mathbb{C}}\xspace}
+    \newcommand{\Q}{\ensuremath{\mathbb{Q}}\xspace}
+    \newcommand{\R}{\ensuremath{\mathbb{R}}\xspace}
+    \renewcommand{\P}{\ensuremath{\mathbb{P}}\xspace}
+
+%% Mathscr Letters
+    \newcommand{\Asc}{\mathscr{A}}
+    \renewcommand{\L}{\mathscr{L}}
+    \newcommand{\M}{\mathscr{M}}
+    \newcommand{\E}{\mathscr{E}}
+
+%% Mathcal Letters
+    \newcommand{\Ee}{\mathcal{E}}
+    \newcommand{\Eevec}{\bm{\mathcal{E}}}
+
+%% Unit vectors
+    \newcommand{\ahat}{\hat{\mathbf{a}}}
+    \newcommand{\bhat}{\hat{\mathbf{b}}}
+    \newcommand{\chat}{\hat{\mathbf{c}}}
+    \newcommand{\dhat}{\hat{\mathbf{d}}}
+    \newcommand{\ehat}{\hat{\mathbf{e}}}
+    \newcommand{\fhat}{\hat{\mathbf{f}}}
+    \newcommand{\ghat}{\hat{\mathbf{g}}}
+    \newcommand{\hhat}{\hat{\mathbf{h}}}
+    \newcommand{\ihat}{\hat{\mathbf{i}}}
+    \newcommand{\jhat}{\hat{\mathbf{j}}}
+    \newcommand{\khat}{\hat{\mathbf{k}}}
+    \newcommand{\lhat}{\hat{\mathbf{l}}}
+    \newcommand{\mhat}{\hat{\mathbf{m}}}
+    \newcommand{\nhat}{\hat{\mathbf{n}}}
+    \newcommand{\ohat}{\hat{\mathbf{o}}}
+    \newcommand{\phat}{\hat{\mathbf{p}}}
+    \newcommand{\qhat}{\hat{\mathbf{q}}}
+    \newcommand{\rhat}{\hat{\mathbf{r}}}
+    \newcommand{\shat}{\hat{\mathbf{s}}}
+    \newcommand{\that}{\hat{\mathbf{t}}}
+    \newcommand{\uhat}{\hat{\mathbf{u}}}
+    \newcommand{\vhat}{\hat{\mathbf{v}}}
+    \newcommand{\xhat}{\hat{\mathbf{x}}}
+    \newcommand{\yhat}{\hat{\mathbf{y}}}
+    \newcommand{\zhat}{\hat{\mathbf{z}}}
+
+%   \newcommand{\scrhat}{\hat{\mathbscr{\altr}}}
+    \newcommand{\thetahat}{\hat{\mathbm{\theta}}}
+    \newcommand{\phihat}{\hat{\mathbm{\phi}}}
+
+%% Vectors
+    \newcommand{\avec}{\mathbf{a}}
+    \newcommand{\bvec}{\mathbf{b}}
+    \newcommand{\cvec}{\mathbf{c}}
+    \newcommand{\dvec}{\mathbf{d}}
+    \newcommand{\evec}{\mathbf{e}}
+    \newcommand{\fvec}{\mathbf{f}}
+    \newcommand{\gvec}{\mathbf{g}}
+    \newcommand{\hvec}{\mathbf{h}}
+    \newcommand{\ivec}{\mathbf{i}}
+    \newcommand{\jvec}{\mathbf{j}}
+    \newcommand{\kvec}{\mathbf{k}}
+    \newcommand{\lvec}{\mathbf{l}}
+    \newcommand{\mvec}{\mathbf{m}}
+    \newcommand{\nvec}{\mathbf{n}}
+    \newcommand{\ovec}{\mathbf{o}}
+    \newcommand{\pvec}{\mathbf{p}}
+    \newcommand{\qvec}{\mathbf{q}}
+    \newcommand{\rvec}{\mathbf{r}}
+    \newcommand{\svec}{\mathbf{s}}
+    \newcommand{\tvec}{\mathbf{t}}
+    \newcommand{\uvec}{\mathbf{u}}
+    \newcommand{\vvec}{\mathbf{v}}
+    \newcommand{\wvec}{\mathbf{w}}
+    \newcommand{\xvec}{\mathbf{x}}
+    \newcommand{\yvec}{\mathbf{y}}
+    \newcommand{\zvec}{\mathbf{z}}
+
+    \newcommand{\Avec}{\mathbf{A}}
+    \newcommand{\Bvec}{\mathbf{B}}
+    \newcommand{\Cvec}{\mathbf{C}}
+    \newcommand{\Dvec}{\mathbf{D}}
+    \newcommand{\Evec}{\mathbf{E}}
+    \newcommand{\Fvec}{\mathbf{F}}
+    \newcommand{\Gvec}{\mathbf{G}}
+    \newcommand{\Hvec}{\mathbf{H}}
+    \newcommand{\Ivec}{\mathbf{I}}
+    \newcommand{\Jvec}{\mathbf{J}}
+    \newcommand{\Kvec}{\mathbf{K}}
+    \newcommand{\Lvec}{\mathbf{L}}
+    \newcommand{\Mvec}{\mathbf{M}}
+    \newcommand{\Nvec}{\mathbf{N}}
+    \newcommand{\Ovec}{\mathbf{O}}
+    \newcommand{\Pvec}{\mathbf{P}}
+    \newcommand{\Qvec}{\mathbf{Q}}
+    \newcommand{\Rvec}{\mathbf{R}}
+    \newcommand{\Svec}{\mathbf{S}}
+    \newcommand{\Tvec}{\mathbf{T}}
+    \newcommand{\Uvec}{\mathbf{U}}
+    \newcommand{\Vvec}{\mathbf{V}}
+    \newcommand{\Wvec}{\mathbf{W}}
+    \newcommand{\Xvec}{\mathbf{X}}
+    \newcommand{\Yvec}{\mathbf{Y}}
+    \newcommand{\Zvec}{\mathbf{Z}}
+
+%   \newcommand{\scr}{\mathscr{\altr}}
+%   \newcommand{\scrvec}{\mathbscr{\altr}}
+    \def\scr{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{ScriptR}}$}}}
+\def\scrvec{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{BoldR}}$}}}
+    \newcommand{\omegavec}{\bm{\omega}}
+    \newcommand{\thetavec}{\bm{\theta}}
+    \newcommand{\phivec}{\bm{\phi}}
+    \newcommand{\epsilonvec}{\bm{\epsilon}}
+    \newcommand{\varepsilonvec}{\bm{\varepsilon}}
+
+%% Dots
+    \newcommand{\xdot}{\dot{x}}
+    \newcommand{\ydot}{\dot{y}}
+    \newcommand{\zdot}{\dot{z}}
+    \newcommand{\rdot}{\dot{r}}
+%   \newcommand{\scrdot}{\dot{\mathscr{\altr}}}
+    \newcommand{\sdot}{\dot{s}}
+    \newcommand{\thetadot}{\dot{\theta}}
+    \newcommand{\phidot}{\dot{\phi}}
+%% Double dots
+    \newcommand{\xddot}{\ddot{x}}
+    \newcommand{\yddot}{\ddot{y}}
+    \newcommand{\zddot}{\ddot{z}}
+    \newcommand{\rddot}{\ddot{r}}
+%   \newcommand{\scrddot}{\ddot{\mathscr{\altr}}}
+    \newcommand{\sddot}{\ddot{s}}
+    \newcommand{\thetaddot}{\ddot{\theta}}
+    \newcommand{\phiddot}{\dot{\phi}}
+
+%% Operators %%
+    \newcommand{\p}{\ensuremath{\partial}\xspace}
+    \newcommand{\del}{\,\xspace\ensuremath{\nabla}\xspace}
+    \newcommand{\curl}{\ensuremath{\nabla\times}\xspace}
+    \newcommand{\w}{\,\xspace\ensuremath{\wedge}\xspace}
+
+%% Parentheses, brackets, braces
+    \newcommand{\rb}[1]{\ensuremath{\left(#1\right)}\xspace}
+    \renewcommand{\sb}[1]{\ensuremath{\left[#1\right]}\xspace}
+    \newcommand{\cb}[1]{\ensuremath{\left\{#1\right\}}\xspace}
+    \newcommand{\avg}[1]{\ensuremath{\left<#1\right>}\xspace}
+    \newcommand{\abs}[1]{\left|#1\right|}
+
+%% Misc.
+    \newcommand{\up}{\ensuremath{\uparrow}\xspace}
+    \newcommand{\dn}{\ensuremath{\downarrow}\xspace}
+    \newcommand{\order}[1]{\ensuremath{\mathcal{O}\left(#1\right)}}
+
+    \newcommand{\pby}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}\xspace}
+    \newcommand{\dby}[ 2]{\ensuremath{\frac{d #1}{d #2}}\xspace}
+
+    \newcommand{\mat}[2]{\left(\begin{array}{*{#1}{c}}#2\end{array}\right)}
+    \newcommand{\curlymat}[2]{\left\{\begin{array}{*{#1}{c}}#2\end{array}\right\}}
+
+    \newcommand{\nbyn}[2]{#1\hspace{-1mm}\times\hspace{-1mm}#2}
+    \renewcommand{\And}{\enskip\text{ and }\enskip}
+    \newcommand{\Or}{\enskip\text{ or }\enskip}
+    \newcommand{\Where}{\enskip\text{ where }\enskip}
+    \newcommand{\Wtih}{\enskip\text{ with }\enskip}
+    \newcommand{\nnret}{\nonumber \\}
+    \newcommand{\vv}[1]{\mathbf{#1}}
+    \renewcommand{\sl}[1]{\slashed{#1}}
+    \newcommand{\at}[1]{\Big|_{#1}}
